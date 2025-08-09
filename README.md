@@ -1,6 +1,6 @@
 # Threat-Hunts
 
-Scenario 1 – The Malicious Macro Dropper
+### Scenario 1 – The Malicious Macro Dropper
 Story:
 An employee in your finance department opens an “urgent invoice” sent from a spoofed vendor email. The invoice contains a macro that, if enabled, would normally download a malicious payload from an attacker’s server. In our simulation, we’ll use PowerShell to download a harmless text file and place it in a suspicious location.
 
